@@ -1,0 +1,240 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Container like the reference: narrow column, lots of white space */
+.intro-text{
+  max-width: 760px;          /* keep lines short */
+  margin: 72px auto;         /* generous vertical rhythm */
+  padding: 0 22px;           /* side padding for mobile */
+  color: #1b1f23;
+}
+
+/* Name + project line (looks like your screenshot) */
+.intro-text h1{
+  margin: 18px 0 6px;
+  font-family: -apple-system, system-ui, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+  font-weight: 700;          /* appears “thin” when uppercase + tracking used */
+  font-size: 1.02rem;        /* compact, refined */
+  line-height: 1.35;
+  letter-spacing: .14em;     /* the airy uppercase vibe */
+  text-transform: uppercase;
+  color: #2f353a;
+}
+
+/* Tighten the colon-to-title gap visually */
+.intro-text h1 b{
+  font-weight: 800;          /* slightly stronger for the name */
+}
+.intro-text h1 i{
+  font-style: italic;
+  font-weight: 800;          /* bold italic for the project title */
+  letter-spacing: .02em;     /* less tracking than the name */
+  text-transform: uppercase; /* keep the title uppercase as per screenshot */
+}
+
+/* Quote paragraph */
+.intro-text p{
+  margin: 0 0 18px;
+  color: #5b646d;
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
+/* Optional subtle divider between each testimonial block */
+.intro-text p + h1{
+  margin-top: 18px;
+}
+
+
+
+
+
+/* ==== Ray-style section: heading + narrow paragraph ==== */
+.intro-text{
+  /* narrow column like the reference page */
+  max-width: 760px;
+  margin: 72px auto;             /* generous white space */
+  padding: 0 20px;               /* mobile side padding */
+  color: #1b1f23;
+}
+
+.intro-text > h1{
+  /* thin, uppercase, tight vertical rhythm */
+  margin: 0 0 12px !important;
+  font-family: -apple-system, system-ui, "Segoe UI", Inter, Roboto, Arial, sans-serif !important;
+  font-weight: 700 !important;   /* appears thin once uppercase + tracking applied */
+  font-size: 1.25rem !important; /* ~20px on desktop like the screenshot */
+  line-height: 1.25 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;  /* airy uppercase look */
+  color: #3a4046 !important;
+}
+
+/* Optional: subtle accent line under the heading (comment out if not wanted) */
+.intro-text > h1::after{
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-top: 8px;
+  background: #d4af37; /* subtle gold */
+}
+
+.intro-text > p{
+  margin: 0;
+  font-size: 0.98rem;        /* compact, matches feel on the site */
+  line-height: 1.75;         /* comfortable reading line-height */
+  color: #535a61;            /* slightly muted body text */
+  max-width: 740px;          /* keep paragraph lines short */
+  text-wrap: pretty;         /* nicer wrapping where supported */
+}
+
+/* Optional: a gentle divider if this block is followed by another section */
+.intro-text.section-divider{
+  border-top: 1px solid #e9edf2;
+  box-shadow: inset 0 12px 24px -24px rgba(0,0,0,.18);
+  padding-top: 64px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px){
+  .intro-text{ margin: 56px auto; padding: 0 16px; }
+  .intro-text > h1{ font-size: 1.08rem; letter-spacing: 0.16em; }
+  .intro-text > p{ line-height: 1.7; }
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Services */
+.service-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.service-card {
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    display: block;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
